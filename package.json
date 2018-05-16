@@ -1,39 +1,37 @@
 {
   "name": "keycuts",
   "version": "0.1.0",
-  "description":
-    "A modern keyboard event library for managing keyboard shortcuts.",
+  "description": "A modern keyboard event library for managing keyboard shortcuts.",
   "main": "dist/keycuts.js",
   "unpkg": "dist/keycuts.min.js",
   "module": "src/index.js",
   "author": "Kai Schlamp",
   "license": "MIT",
-  "files": ["dist/", "src/", "README.md", "LICENSE"],
+  "files": [
+    "dist/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "build":
-      "yarn run eslint && yarn run test && yarn run webpack && yarn run docs",
-    "clean":
-      "yarn run clean:coverage && yarn run clean:dist && yarn run clean:docs",
+    "build": "npm run eslint && npm run test && npm run webpack && npm run docs",
+    "clean": "npm run clean:coverage && npm run clean:dist && npm run clean:docs",
     "clean:coverage": "rimraf coverage/*",
     "clean:dist": "rimraf dist/*",
     "clean:docs": "rimraf docs/api/*",
-    "docs":
-      "yarn run clean:docs && documentation build src/** -f html -o docs/api",
+    "docs": "npm run clean:docs && documentation build src/** -f html -o docs/api",
     "coverage": "jest --coverage",
-    "deploy": "yarn publish && git push origin master",
-    "deploy:patch": "yarn version --patch && yarn run deploy",
-    "deploy:minor": "yarn version --minor && yarn run deploy",
-    "deploy:major": "yarn version --major && yarn run deploy",
+    "deploy": "npm run build && git push origin master && npm publish",
+    "deploy:patch": "npm version patch && npm run deploy",
+    "deploy:minor": "npm version minor && npm run deploy",
+    "deploy:major": "npm version major && npm run deploy",
     "eslint": "eslint src/",
-    "prepublishOnly": "yarn run build",
     "start": "webpack-dev-server --config ./webpack.dev.config.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "webpack":
-      "yarn run clean:dist && yarn run webpack:dev && yarn run webpack:prod",
+    "webpack": "npm run clean:dist && npm run webpack:dev && npm run webpack:prod",
     "webpack:dev": "webpack --progress --config ./webpack.dev.config.js",
-    "webpack:watch":
-      "webpack --progress --watch --config ./webpack.dev.config.js",
+    "webpack:watch": "webpack --progress --watch --config ./webpack.dev.config.js",
     "webpack:prod": "webpack --progress --config ./webpack.prod.config.js"
   },
   "devDependencies": {
@@ -48,12 +46,12 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-loader": "^2.0.0",
     "jest": "^22.4.3",
+    "npm": "^6.0.1",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2",
     "webpack": "^4.8.0",
     "webpack-cli": "^2.1.3",
     "webpack-dev-server": "^3.1.4",
-    "webpack-merge": "^4.1.2",
-    "yarn": "^1.6.0"
+    "webpack-merge": "^4.1.2"
   }
 }
