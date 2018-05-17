@@ -2,6 +2,10 @@
 title: KeyCuts Documentation
 ---
 
+# Demo
+
+Coming soon ...
+
 # Getting Started
 
 Coming soon ...
@@ -41,7 +45,7 @@ Absolutely! If you are a writer by improving the documentation. If you are a cod
 
 # Donations
 
-Coming ...
+Coming soon ...
 
 # License
 
