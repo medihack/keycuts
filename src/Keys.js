@@ -5,6 +5,21 @@ import stringifyShortcut from './stringifyShortcut'
 
 /**
  * The main class to access the features of the KeyCuts library.
+ * @param {HTMLElement} element The HTML element that should listen to
+ *   keyboard shortcuts (if not provided then Window object is used).
+ * @param {Object} options - Additional options (optional).
+ * @param {boolean} options.triggerOncePerKey - If a key is kept down then
+ *   the shortcut will be triggered multiple times when set to false and
+ *   only once when set to true (default: false)
+ * @param {boolean} options.useCodeInsteadKey - If set to false then
+ *   KeyboardEvent.key is evaluated for triggering shortcuts, otherwise
+ *   KeyboardEvent.code (default: false)
+ * @param {number} options.maxSequenceLength - The maximum sequence of
+ *   key or combos that should be tracked (default: 3)
+ * @param {Function} options.filter - A filter function. If the filter
+ *   returns false the event will be filtered out and no bound handler
+ *   or watcher will be triggered. The filter function will be called
+ *   with the key event. The default filter will always return true.
  */
 class Keys {
   /** The name of the default scope. */
@@ -24,24 +39,6 @@ class Keys {
     filter: () => true
   }
 
-  /**
-   * Create a new keys instance.
-   * @param {HTMLElement} shortcut The HTML element that should listen to
-   *   keyboard shortcuts (if not provided then Window object is used).
-   * @param {Object} options - Additional options (optional).
-   * @param {boolean} options.triggerOncePerKey - If a key is kept down then
-   *   the shortcut will be triggered multiple times when set to false and
-   *   only once when set to true (default: false)
-   * @param {boolean} options.useCodeInsteadKey - If set to false then
-   *   KeyboardEvent.key is evaluated for triggering shortcuts, otherwise
-   *   KeyboardEvent.code (default: false)
-   * @param {number} options.maxSequenceLength - The maximum sequence of
-   *   key or combos that should be tracked (default: 3)
-   * @param {Function} options.filter - A filter function. If the filter
-   *   returns false the event will be filtered out and no bound handler
-   *   or watcher will be triggered. The filter function will be called
-   *   with the key event. The default filter will always return true.
-   */
   constructor(element, options) {
     if (!element) element = window
     this._element = element
@@ -141,7 +138,7 @@ class Keys {
 
   /**
    * Bind a keyboard shortcut. A shortcut can be in string or array format.
-   * @param {string|string[]|string[][]} shortcut - The shortcut to bind.
+   * @param {string|string[]|Array.<string[]>} shortcut - The shortcut to bind.
    * @param {string} scope - An optional scope.
    * @param {Function} callback - The callback that should be triggered.
    *   The callback gets called with the current key or combo sequence

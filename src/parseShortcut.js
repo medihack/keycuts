@@ -17,7 +17,7 @@ function convertKey(key) {
 /**
  * Parse a string shortcut and return the equivalent array shortcut.
  * @param {string} shortcut - The string shortcut to convert.
- * @return {string[]|string[][]} The converted array shortcut.
+ * @return {string[]|Array.<string[]>} The converted array shortcut.
  */
 export default function(shortcut) {
   if (typeof shortcut !== 'string')

@@ -33,8 +33,8 @@ function cleanKey(key) {
  * Clean an array shortcut. The array is cleaned in-place and also returned.
  * Unnecessary white space is removed, key combinations are sorted and
  * single chars converted to lower case.
- * @param {string[]|string[][]} shortcut - The array shortcut to clean.
- * @return {string[]|string[][]} The cleaned array shortcut.
+ * @param {string[]|Array.<string[]>} shortcut - The array shortcut to clean.
+ * @return {string[]|Array.<string[]>} The cleaned array shortcut.
  */
 export default function(shortcut) {
   if (!Array.isArray(shortcut) || shortcut.length === 0)

@@ -3,7 +3,7 @@ const FOLLOWED_BY = ' > '
 
 /**
  * Create equivalent string shortcut of an array shortcut.
- * @param {string[]|string[][]} shortcut - The array shortcut to convert.
+ * @param {string[]|Array.<string[]>} shortcut - The array shortcut to convert.
  * @return {string} The converted string shortcurt.
  */
 export default function(shortcut) {
