@@ -17,22 +17,23 @@ function convertKey(key) {
 /**
  * Parse a string shortcut and return the equivalent array shortcut.
  * @param {string} shortcut - The string shortcut to convert.
- * @return {string[]|string[][]} The array shortcut.
+ * @return {string[]|string[][]} The converted array shortcut.
  */
-export default function(signature) {
-  signature = signature.replace(/\s+/g, '')
+export default function(shortcut) {
+  if (typeof shortcut !== 'string')
+    throw new Error('Invalid string shortcut to parse: ' + shortcut)
 
-  if (typeof signature !== 'string' || signature.length === 0)
-    throw new Error(
-      'Invalid signature (must be non empty string): ' + signature
-    )
+  shortcut = shortcut.replace(/\s+/g, '')
+
+  if (typeof shortcut !== 'string' || shortcut.length === 0)
+    throw new Error('Invalid shortcut (must be non empty string): ' + shortcut)
 
   let key = []
   let combo = []
   const sequence = []
 
-  for (let i = 0; i < signature.length; i++) {
-    const c = signature.charAt(i)
+  for (let i = 0; i < shortcut.length; i++) {
+    const c = shortcut.charAt(i)
     if (!key.length) {
       key.push(c)
     } else {
@@ -56,13 +57,13 @@ export default function(signature) {
     combo.sort()
     sequence.push(combo)
   } else {
-    throw new Error('Invalid signature (must end with key): ' + signature)
+    throw new Error('Invalid shortcut (must end with key): ' + shortcut)
   }
 
   for (let combo of sequence) {
     const duplicates = getDuplicates(combo)
     if (duplicates.length > 0)
-      throw new Error('Invalid signature (duplicate keys):' + signature)
+      throw new Error('Invalid shortcut (duplicate keys):' + shortcut)
   }
 
   if (sequence.length === 1) return sequence[0]

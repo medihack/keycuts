@@ -1,13 +1,13 @@
 /* eslint-env jest */
 
 import Keys from './Keys'
-import cleanShortcut from './cleanShortcut'
 import generateId from './generateId'
+import cleanShortcut from './cleanShortcut'
 import parseShortcut from './parseShortcut'
 import stringifyShortcut from './stringifyShortcut'
 
-jest.mock('./cleanShortcut')
 jest.mock('./generateId')
+jest.mock('./cleanShortcut')
 jest.mock('./parseShortcut')
 jest.mock('./stringifyShortcut')
 

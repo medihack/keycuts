@@ -1,7 +1,7 @@
 import generateId from './generateId'
 import cleanShortcut from './cleanShortcut'
-import stringifyShortcut from './stringifyShortcut'
 import parseShortcut from './parseShortcut'
+import stringifyShortcut from './stringifyShortcut'
 
 /**
  * The main class to access the features of the KeyCuts library.

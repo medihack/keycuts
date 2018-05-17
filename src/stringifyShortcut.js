@@ -7,6 +7,9 @@ const FOLLOWED_BY = ' > '
  * @return {string} The converted string shortcurt.
  */
 export default function(shortcut) {
+  if (!Array.isArray(shortcut))
+    throw new Error('Invalid array shortcut to stringify: ' + shortcut)
+
   let isSequence = typeof shortcut[0] !== 'string'
 
   if (!isSequence) {

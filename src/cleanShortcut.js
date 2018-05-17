@@ -38,7 +38,7 @@ function cleanKey(key) {
  */
 export default function(shortcut) {
   if (!Array.isArray(shortcut) || shortcut.length === 0)
-    throw new Error('Invalid shortcut: ' + shortcut)
+    throw new Error('Invalid array shortcut to clean: ' + shortcut)
 
   let isSequence = typeof shortcut[0] !== 'string'
 
