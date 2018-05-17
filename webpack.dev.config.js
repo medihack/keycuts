@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 const merge = require('webpack-merge')
 
 const baseConfig = require('./webpack.base.config.js')
@@ -7,11 +9,11 @@ const devConfig = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './demo',
-    publicPath: '/dist/',
+    publicPath: '/dist/'
   },
   output: {
-    filename: '[name].js',
-  },
+    filename: '[name].js'
+  }
 }
 
 module.exports = merge(baseConfig, devConfig)

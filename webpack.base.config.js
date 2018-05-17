@@ -1,13 +1,15 @@
+/* eslint-env node */
+
 const path = require('path')
 
 module.exports = {
   entry: {
-    keycuts: './src/index.js',
+    keycuts: './src/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     library: '[name]',
-    libraryTarget: 'umd',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
@@ -15,13 +17,13 @@ module.exports = {
         enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
+        loader: 'eslint-loader'
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-      },
-    ],
-  },
+        loader: 'babel-loader'
+      }
+    ]
+  }
 }
