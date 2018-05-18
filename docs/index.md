@@ -2,9 +2,13 @@
 title: KeyCuts Documentation
 ---
 
+# Introduction
+
+KeyCuts is a modern Javascript library for handling keyboard shortcuts. It supports listening for key combinations, key sequences and a mix of both. KeyCuts has no external dependencies and a small footprint (~8kb, gzipped ~3kb).
+
 # Demo
 
-Coming soon ...
+An example of what KeyCuts can do for you can be found [on the demo site](./demo/index.html).
 
 # Getting Started
 
@@ -29,7 +33,7 @@ Coming soon ...
 ## FAQ
 
 ** Why another Javascript keyboard library? **
-The existing keyboard shortcut libraries I have found all use the now deprecated `[charCode](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/charCode)` and `[keyCode](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode)` attributes of `[KeyboardEvent](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)`. KeyCuts uses the newer `[key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key)` and `[code](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)` attributes instead. It also adds features not found in the other libraries.
+The existing keyboard shortcut libraries I have found all use the now deprecated [`charCode`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/charCode) and [`keyCode`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode) attributes of [`KeyboardEvent`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent). KeyCuts uses the newer [`key`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key) and [`code`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code) attributes instead. It also adds features not found in the other libraries.
 
 ** What browsers are supported? **
 By using the above mentioned newer (and not deprecated) `key` and `code` attributes of `KeyboardEvend` KeyCuts only supports [modern browser](https://caniuse.com/#feat=keyboardevent-key) (especially IE >= 11). If you need to support older browsers then KeyCuts is not for you and you have to look somewhere else (e.g. [Hotkeys](https://github.com/jaywcjlove/hotkeys), [Keypress](https://github.com/dmauro/Keypress/), [keymaster.js](https://github.com/madrobby/keymaster), [Mousetrap](https://github.com/ccampbell/mousetrap), [KeyboardJS](https://github.com/RobertWHurst/KeyboardJS)).
@@ -45,7 +49,9 @@ Absolutely! If you are a writer by improving the documentation. If you are a cod
 
 # Donations
 
-Coming soon ...
+Patreon: https://www.patreon.com/medihack
+Bitcoin (BTC): 3H9fLhG57rFffUcHKxgZjvgPhjyNJkuRf4
+Ethereum (ETH): 0xf0e7cf37e7341ad766b43849e14a101d59b133a0
 
 # License
 
