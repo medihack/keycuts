@@ -49,9 +49,11 @@ Absolutely! If you are a writer by improving the documentation. If you are a cod
 
 # Donations
 
-Patreon: https://www.patreon.com/medihack
-Bitcoin (BTC): 3H9fLhG57rFffUcHKxgZjvgPhjyNJkuRf4
-Ethereum (ETH): 0xf0e7cf37e7341ad766b43849e14a101d59b133a0
+* Patreon: https://www.patreon.com/medihack
+* Bitcoin (BTC): 3H9fLhG57rFffUcHKxgZjvgPhjyNJkuRf4
+* Bitcoin Cash (BCH): 32ySUMJEo6CJ6irwG6pEPLcMGoe9Fs5ekj
+* Ethereum (ETH): 0xf0e7cf37e7341ad766b43849e14a101d59b133a0
+* Litecoin (LTC): MTjyBS9JwDTWi96PrGMTwb5fsST2SsiqRE
 
 # License
 
