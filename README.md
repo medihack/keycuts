@@ -2,6 +2,9 @@
 
 KeyCuts is a modern Javascript library for handling keyboard shortcuts. It supports listening for key combinations, key sequences and a mix of both. KeyCuts has no external dependencies and a small footprint (~8kb, gzipped ~3kb).
 
+* [KeyCuts Homepage](https://medihack.github.io/keycuts/)
+* [KeyCuts Demo](https://medihack.github.io/keycuts/demo/)
+
 ## Installation
 
 Install with [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com).
