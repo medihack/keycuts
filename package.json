@@ -5,7 +5,6 @@
     "A modern keyboard event library for managing keyboard shortcuts.",
   "main": "dist/keycuts.js",
   "unpkg": "dist/keycuts.min.js",
-  "module": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/medihack/keycuts.git"
