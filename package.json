@@ -1,46 +1,43 @@
 {
   "name": "keycuts",
   "version": "0.1.6",
-  "description": "A modern keyboard event library for managing keyboard shortcuts.",
+  "description":
+    "A modern keyboard event library for managing keyboard shortcuts.",
   "main": "dist/keycuts.js",
   "unpkg": "dist/keycuts.min.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/medihack/keycuts.git"
   },
-  "keywords": [
-    "shortcuts",
-    "keyboard",
-    "key"
-  ],
+  "keywords": ["shortcuts", "keyboard", "key"],
   "author": "Kai Schlamp",
   "license": "MIT",
-  "files": [
-    "dist/",
-    "src/",
-    "README.md",
-    "LICENSE"
-  ],
+  "files": ["dist/", "src/", "README.md", "LICENSE"],
   "scripts": {
     "build": "npm run eslint && npm run test && npm run webpack",
-    "clean": "npm run clean:coverage && npm run clean:dist && npm run clean:docs",
+    "clean":
+      "npm run clean:coverage && npm run clean:dist && npm run clean:docs",
     "clean:coverage": "rimraf coverage/*",
     "clean:dist": "rimraf dist/*",
     "clean:docs": "rimraf docs/api/*",
-    "docs": "npm run clean:docs && documentation build src/** -f html -o docs/api",
+    "docs":
+      "npm run clean:docs && documentation build src/** -f html -o docs/api",
     "coverage": "jest --coverage",
     "deploy": "git push origin master && npm publish",
     "deploy:patch": "npm version patch && npm run deploy",
     "deploy:minor": "npm version minor && npm run deploy",
     "deploy:major": "npm version major && npm run deploy",
     "eslint": "eslint src/",
-    "start": "webpack-dev-server --config ./webpack.dev.config.js",
+    "start": "webpack-dev-server --config ./config/webpack.dev.config.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "webpack": "npm run clean:dist && npm run webpack:dev && npm run webpack:prod",
-    "webpack:dev": "webpack --progress --config ./webpack.dev.config.js",
-    "webpack:watch": "webpack --progress --watch --config ./webpack.dev.config.js",
-    "webpack:prod": "webpack --progress --config ./webpack.prod.config.js"
+    "webpack":
+      "npm run clean:dist && npm run webpack:dev && npm run webpack:prod",
+    "webpack:dev": "webpack --progress --config ./config/webpack.dev.config.js",
+    "webpack:watch":
+      "webpack --progress --watch --config ./config/webpack.dev.config.js",
+    "webpack:prod":
+      "webpack --progress --config ./config/webpack.prod.config.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -54,7 +51,6 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-loader": "^2.0.0",
     "jest": "^22.4.3",
-    "npm": "^6.0.1",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2",
     "webpack": "^4.8.0",

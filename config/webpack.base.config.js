@@ -4,10 +4,10 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    keycuts: './src/index.js'
+    keycuts: path.resolve(__dirname, '../src/index.js')
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     library: '[name]',
     libraryTarget: 'umd'
   },
