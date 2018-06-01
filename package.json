@@ -1,27 +1,33 @@
 {
   "name": "keycuts",
-  "version": "0.1.6",
-  "description":
-    "A modern keyboard event library for managing keyboard shortcuts.",
+  "version": "0.2.0",
+  "description": "A modern keyboard event library for managing keyboard shortcuts.",
   "main": "dist/keycuts.js",
   "unpkg": "dist/keycuts.min.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/medihack/keycuts.git"
   },
-  "keywords": ["shortcuts", "keyboard", "key"],
+  "keywords": [
+    "shortcuts",
+    "keyboard",
+    "key"
+  ],
   "author": "Kai Schlamp",
   "license": "MIT",
-  "files": ["dist/", "src/", "README.md", "LICENSE"],
+  "files": [
+    "dist/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "yarn run eslint && yarn run test && yarn run webpack",
-    "clean":
-      "yarn run clean:coverage && yarn run clean:dist && yarn run clean:docs",
+    "clean": "yarn run clean:coverage && yarn run clean:dist && yarn run clean:docs",
     "clean:coverage": "rimraf coverage/*",
     "clean:dist": "rimraf dist/*",
     "clean:docs": "rimraf docs/api/*",
-    "docs":
-      "yarn run clean:docs && documentation build src/** -f html -o docs/api",
+    "docs": "yarn run clean:docs && documentation build src/** -f html -o docs/api",
     "coverage": "jest --coverage",
     "deploy": "git push origin master && yarn publish",
     "deploy:patch": "yarn version --patch && yarn run deploy",
@@ -31,13 +37,10 @@
     "start": "webpack-dev-server --config ./config/webpack.dev.config.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "webpack":
-      "yarn run clean:dist && yarn run webpack:dev && yarn run webpack:prod",
+    "webpack": "yarn run clean:dist && yarn run webpack:dev && yarn run webpack:prod",
     "webpack:dev": "webpack --progress --config ./config/webpack.dev.config.js",
-    "webpack:watch":
-      "webpack --progress --watch --config ./config/webpack.dev.config.js",
-    "webpack:prod":
-      "webpack --progress --config ./config/webpack.prod.config.js"
+    "webpack:watch": "webpack --progress --watch --config ./config/webpack.dev.config.js",
+    "webpack:prod": "webpack --progress --config ./config/webpack.prod.config.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
