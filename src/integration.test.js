@@ -32,8 +32,8 @@ describe('bound handlers', () => {
       done()
     })
 
-    window.dispatchEvent(keyEvents.aKeyDown)
-    window.dispatchEvent(keyEvents.bKeyDown)
+    document.dispatchEvent(keyEvents.aKeyDown)
+    document.dispatchEvent(keyEvents.bKeyDown)
   })
 
   test('should listen to combo defined by array shortcut', done => {
@@ -43,8 +43,8 @@ describe('bound handlers', () => {
       done()
     })
 
-    window.dispatchEvent(keyEvents.aKeyDown)
-    window.dispatchEvent(keyEvents.bKeyDown)
+    document.dispatchEvent(keyEvents.aKeyDown)
+    document.dispatchEvent(keyEvents.bKeyDown)
   })
 
   test('should listen to sequence defined by string shortcut', done => {
@@ -54,9 +54,9 @@ describe('bound handlers', () => {
       done()
     })
 
-    window.dispatchEvent(keyEvents.aKeyDown)
-    window.dispatchEvent(keyEvents.aKeyUp)
-    window.dispatchEvent(keyEvents.bKeyDown)
+    document.dispatchEvent(keyEvents.aKeyDown)
+    document.dispatchEvent(keyEvents.aKeyUp)
+    document.dispatchEvent(keyEvents.bKeyDown)
   })
 
   test('should listen to sequence defined by array shortcut', done => {
@@ -66,9 +66,9 @@ describe('bound handlers', () => {
       done()
     })
 
-    window.dispatchEvent(keyEvents.aKeyDown)
-    window.dispatchEvent(keyEvents.aKeyUp)
-    window.dispatchEvent(keyEvents.bKeyDown)
+    document.dispatchEvent(keyEvents.aKeyDown)
+    document.dispatchEvent(keyEvents.aKeyUp)
+    document.dispatchEvent(keyEvents.bKeyDown)
   })
 })
 
@@ -91,7 +91,7 @@ describe('watchers', () => {
       }
     })
 
-    window.dispatchEvent(keyEvents.aKeyDown)
-    window.dispatchEvent(keyEvents.aKeyUp)
+    document.dispatchEvent(keyEvents.aKeyDown)
+    document.dispatchEvent(keyEvents.aKeyUp)
   })
 })

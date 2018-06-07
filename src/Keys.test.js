@@ -56,8 +56,8 @@ afterEach(() => {
 })
 
 describe('default Keys instance', () => {
-  test('should work on windows element and have default options', () => {
-    expect(keys._element).toBe(window)
+  test('should work on document element and have default options', () => {
+    expect(keys._element).toBe(document)
     expect(keys.options).toEqual({
       triggerOncePerKey: false,
       useCodeInsteadKey: false,
@@ -69,12 +69,12 @@ describe('default Keys instance', () => {
 })
 
 describe('constructor method', () => {
-  test('should attach listeners to window', () => {
-    window.addEventListener = jest.fn()
+  test('should attach listeners to document', () => {
+    document.addEventListener = jest.fn()
 
     const _keys = new Keys()
 
-    expect(window.addEventListener.mock.calls).toEqual([
+    expect(document.addEventListener.mock.calls).toEqual([
       ['keydown', _keys._onKeyDown],
       ['keyup', _keys._onKeyUp],
       ['focus', _keys._resetKeys],
@@ -289,13 +289,13 @@ describe('stop method', () => {
   test('should dettach event listeners and stop', () => {
     expect(keys._stopped).toBe(false)
 
-    window.removeEventListener = jest.fn()
+    document.removeEventListener = jest.fn()
     keys._resetKeys = jest.fn()
 
     keys.stop()
 
     expect(keys._stopped).toBe(true)
-    expect(window.removeEventListener.mock.calls).toEqual([
+    expect(document.removeEventListener.mock.calls).toEqual([
       ['keydown', keys._onKeyDown],
       ['keyup', keys._onKeyUp],
       ['focus', keys._resetKeys],
@@ -313,10 +313,10 @@ describe('resume method', () => {
 
     expect(keys._stopped).toBe(true)
 
-    window.addEventListener = jest.fn()
+    document.addEventListener = jest.fn()
     keys.resume()
 
-    expect(window.addEventListener.mock.calls).toEqual([
+    expect(document.addEventListener.mock.calls).toEqual([
       ['keydown', keys._onKeyDown],
       ['keyup', keys._onKeyUp],
       ['focus', keys._resetKeys],

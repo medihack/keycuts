@@ -6,7 +6,7 @@ import stringifyShortcut from './stringifyShortcut'
 /**
  * The main class to access the features of the KeyCuts library.
  * @param {HTMLElement} element The HTML element that should listen to
- *   keyboard shortcuts (if not provided then Window object is used).
+ *   keyboard shortcuts (if not provided then the document object is used).
  * @param {Object} options - Additional options (optional).
  * @param {boolean} options.triggerOncePerKey - If a key is kept down then
  *   the shortcut will be triggered multiple times when set to false and
@@ -40,7 +40,7 @@ class Keys {
   }
 
   constructor(element, options) {
-    if (!element) element = window
+    if (!element) element = document
     this._element = element
 
     Object.assign(this.options, options)

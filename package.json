@@ -1,6 +1,6 @@
 {
   "name": "keycuts",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A modern keyboard event library for managing keyboard shortcuts.",
   "main": "dist/keycuts.js",
   "unpkg": "dist/keycuts.min.js",
