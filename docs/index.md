@@ -60,4 +60,4 @@ Absolutely! If you are a writer by improving the documentation. If you are a cod
 
 ## License
 
-[MIT © Kai Schlamp](./LICENSE)
+[MIT © Kai Schlamp](https://raw.githubusercontent.com/medihack/keycuts/master/LICENSE)
