@@ -2,37 +2,37 @@
 title: _keycuts_ Documentation
 ---
 
-<img src="https://cdn.rawgit.com/medihack/keycuts/master/src/keycuts_logo_full.svg" height="150"></img>
+# <img src="https://cdn.rawgit.com/medihack/keycuts/master/src/keycuts_logo_full.svg" height="150" />
 
-# Introduction
+## Introduction
 
 _keycuts_ is a modern Javascript library for handling keyboard shortcuts. It supports listening for key combinations, key sequences and a mix of both. _keycuts_ has no external dependencies and a small footprint (~8kb, gzipped ~3kb).
 
-# Demo
+## Demo
 
 An example of what _keycuts_ can do for you can be found [on the demo site](./demo/index.html).
 
-# Getting Started
+## Getting Started
 
 Coming soon ...
 
-# Bind Shortcuts
+## Bind Shortcuts
 
 Coming soon ...
 
-# Watchers
+## Watchers
 
 Coming soon ...
 
-# Options
+## Options
 
 Coming soon ...
 
-# API Reference
+## API Reference
 
 [Link to the API reference](./api/index.html)
 
-## FAQ
+### FAQ
 
 **Why another Javascript keyboard library?**
 
@@ -53,11 +53,11 @@ The very liberal MIT license.
 **Can I support this library somehow?**
 Absolutely! If you are a writer by improving the documentation. If you are a coder by fixing bugs and writing tests. If you are a creative mind by suggesting features. If you are damn rich by donating money or even better BTC / ETH (see Donations).
 
-# Donations
+## Donations
 
 * Bitcoin (BTC): 3H9fLhG57rFffUcHKxgZjvgPhjyNJkuRf4
 * Ethereum (ETH): 0xf0e7cf37e7341ad766b43849e14a101d59b133a0
 
-# License
+## License
 
 [MIT © Kai Schlamp](./LICENSE)
