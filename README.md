@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/medihack/keycuts/master/src/keycuts_logo.svg" height="100">keycuts</img>
+# <img src="https://cdn.rawgit.com/medihack/keycuts/master/src/keycuts_logo_full.svg" height="100"></img>
 
 `keycuts` is a modern Javascript library for handling keyboard shortcuts. It supports listening for key combinations, key sequences and a mix of both. `keycuts` has no external dependencies and a small footprint (~8kb, gzipped ~3kb).
 
@@ -100,6 +100,10 @@ $ npm run test:watch
 More scripts to manage the library can be found in the scripts section in the (./package.json) file.
 
 To contribute, please fork, add your patch, write tests for it and submit a pull request.
+
+## Contributions
+
+Logo by Torsten Kühr ([werkst.de](http://werkst.de))
 
 ## License
 
