@@ -1,9 +1,9 @@
 # <img src="https://cdn.rawgit.com/medihack/keycuts/master/src/keycuts_logo_full.svg" height="100"></img>
 
-`keycuts` is a modern Javascript library for handling keyboard shortcuts. It supports listening for key combinations, key sequences and a mix of both. `keycuts` has no external dependencies and a small footprint (~8kb, gzipped ~3kb).
+_keycuts_ is a modern Javascript library for handling keyboard shortcuts. It supports listening for key combinations, key sequences and a mix of both. _keycuts_ has no external dependencies and a small footprint (~8kb, gzipped ~3kb).
 
-* [keycuts Homepage](https://medihack.github.io/keycuts/)
-* [keycuts Demo](https://medihack.github.io/keycuts/demo/)
+* [_keycuts_ Homepage](https://medihack.github.io/keycuts/)
+* [_keycuts_ Demo](https://medihack.github.io/keycuts/demo/)
 
 ## Installation
 
@@ -61,7 +61,7 @@ key.watch((sequence, event) => {
 })
 ```
 
-But `keycuts` can do more! The full documentation, API reference and a demo can be found on the [`keycuts` homepage](https://medihack.github.io/keycuts).
+But _keycuts_ can do more! The full documentation, API reference and a demo can be found on the [_keycuts_ homepage](https://medihack.github.io/keycuts).
 
 ## Development
 
@@ -73,7 +73,7 @@ $ cd keycuts
 $ npm install # or yarn install
 ```
 
-`keycuts` uses Webpack to transpile the source code (`src/`) into a minified and non-minified bundle in the `dist/` folder.
+_keycuts_ uses Webpack to transpile the source code (`src/`) into a minified and non-minified bundle in the `dist/` folder.
 
 ```shell
 $ npm run build
