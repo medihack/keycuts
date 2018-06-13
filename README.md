@@ -55,7 +55,7 @@ key.bind('Control + a > Control + b', () => {
 
 // Watch every keydown or keyup event and have access
 // to the current key sequence
-key.watch((sequence, event) => {
+key.watch((event, sequence) => {
   // acces the currently pressed key combo
   const combo = sequence[sequence.length - 1]
 })

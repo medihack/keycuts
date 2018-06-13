@@ -8,7 +8,7 @@ const shortcutsConfigDescription =
   'To change a shortcut focus an input (by clicking it or tabbing) and ' +
   'type on the keyboard. End the editing by leaving the input (click ' +
   'somewhere else or tab until no input is highlighted). By default ' +
-  'KeyCuts uses a maximum shortcut key sequence of 3, which can ' +
+  'keycuts uses a maximum shortcut key sequence of 3, which can ' +
   'be customized in your app.'
 
 const gameBoardDescription =
@@ -66,7 +66,7 @@ class Game extends React.Component {
     const dirs = ['up', 'down', 'left', 'right']
     const that = this
     for (let dir of dirs) {
-      this.keys.bind(this.state.shortcuts[dir], function(sequence, event) {
+      this.keys.bind(this.state.shortcuts[dir], function(event) {
         event.preventDefault()
         that.handleChangePosition(dir)
       })
@@ -186,7 +186,7 @@ class ShortcutSetter extends React.Component {
     this.keys = new keycuts.Keys(this.inputRef.current)
 
     const that = this
-    this.keys.watch(function(sequence, event) {
+    this.keys.watch(function(event, sequence) {
       event.preventDefault()
 
       if (event.type === 'keydown') {

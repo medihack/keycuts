@@ -26,9 +26,9 @@ afterEach(() => {
 
 describe('bound handlers', () => {
   test('should listen to combo defined by string shortcut', done => {
-    keys.bind('a + b', (sequence, event) => {
-      expect(sequence).toEqual([['a', 'b']])
+    keys.bind('a + b', (event, sequence) => {
       expect(event).toBe(keyEvents.bKeyDown)
+      expect(sequence).toEqual([['a', 'b']])
       done()
     })
 
@@ -37,9 +37,9 @@ describe('bound handlers', () => {
   })
 
   test('should listen to combo defined by array shortcut', done => {
-    keys.bind(['a', 'b'], (sequence, event) => {
-      expect(sequence).toEqual([['a', 'b']])
+    keys.bind(['a', 'b'], (event, sequence) => {
       expect(event).toBe(keyEvents.bKeyDown)
+      expect(sequence).toEqual([['a', 'b']])
       done()
     })
 
@@ -48,9 +48,9 @@ describe('bound handlers', () => {
   })
 
   test('should listen to sequence defined by string shortcut', done => {
-    keys.bind('a > b', (sequence, event) => {
-      expect(sequence).toEqual([['a'], ['b']])
+    keys.bind('a > b', (event, sequence) => {
       expect(event).toBe(keyEvents.bKeyDown)
+      expect(sequence).toEqual([['a'], ['b']])
       done()
     })
 
@@ -60,9 +60,9 @@ describe('bound handlers', () => {
   })
 
   test('should listen to sequence defined by array shortcut', done => {
-    keys.bind([['a'], ['b']], (sequence, event) => {
-      expect(sequence).toEqual([['a'], ['b']])
+    keys.bind([['a'], ['b']], (event, sequence) => {
       expect(event).toBe(keyEvents.bKeyDown)
+      expect(sequence).toEqual([['a'], ['b']])
       done()
     })
 
@@ -76,17 +76,17 @@ describe('watchers', () => {
   test('should listen to key events', done => {
     let _counter = 0
 
-    keys.watch((sequence, event) => {
+    keys.watch((event, sequence) => {
       _counter++
 
       if (_counter === 1) {
-        expect(sequence).toEqual([['a']])
         expect(event).toBe(keyEvents.aKeyDown)
+        expect(sequence).toEqual([['a']])
       }
 
       if (_counter === 2) {
-        expect(sequence).toEqual([['a']])
         expect(event).toBe(keyEvents.aKeyUp)
+        expect(sequence).toEqual([['a']])
         done()
       }
     })

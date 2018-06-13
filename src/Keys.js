@@ -4,7 +4,7 @@ import parseShortcut from './parseShortcut'
 import stringifyShortcut from './stringifyShortcut'
 
 /**
- * The main class to access the features of the KeyCuts library.
+ * The main class to access the features of the keycuts library.
  * @param {HTMLElement} element The HTML element that should listen to
  *   keyboard shortcuts (if not provided then the document object is used).
  * @param {Object} options - Additional options (optional).
@@ -111,7 +111,7 @@ class Keys {
     const sequence = JSON.parse(JSON.stringify(this._sequence))
 
     for (let watcher of this._watchers) {
-      watcher.callback(sequence, event)
+      watcher.callback(event, sequence)
     }
   }
 
@@ -131,7 +131,7 @@ class Keys {
         this._currentScope === handler.scope &&
         signatures.includes(handler.signature)
       ) {
-        handler.callback(sequence, event)
+        handler.callback(event, sequence)
       }
     }
   }
